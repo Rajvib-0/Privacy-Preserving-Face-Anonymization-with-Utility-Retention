@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.box{fill:#fff;stroke:#111827;stroke-width:2.2;rx:16}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2.2;rx:16}.green{fill:#ecfdf5;stroke:#059669;stroke-width:2.2;rx:16}.rose{fill:#fff1f2;stroke:#e11d48;stroke-width:2.2;rx:16}.title{font:700 32px Arial,Helvetica,sans-serif;fill:#111827}.label{font:700 20px Arial,Helvetica,sans-serif;fill:#111827}.small{font:400 15px Arial,Helvetica,sans-serif;fill:#374151}.mono{font:700 15px Consolas,monospace;fill:#111827}.arrow{stroke:#111827;stroke-width:2.8;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 z" fill="#111827"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="620"/>
+  <text class="title" x="700" y="58" text-anchor="middle">PrIdentity Baseline Architecture</text>
+  <rect class="box" x="70" y="220" width="180" height="110"/>
+  <text class="label" x="160" y="258" text-anchor="middle">Input Face</text>
+  <text class="small" x="160" y="288" text-anchor="middle">image I</text>
+  <text class="mono" x="160" y="312" text-anchor="middle">RGB face</text>
+  <rect class="blue" x="330" y="185" width="245" height="180"/>
+  <text class="label" x="452" y="225" text-anchor="middle">Learnable</text>
+  <text class="label" x="452" y="252" text-anchor="middle">Perturbation</text>
+  <text class="small" x="452" y="287" text-anchor="middle">optimize P per image</text>
+  <text class="mono" x="452" y="316" text-anchor="middle">A = clip(I + P)</text>
+  <text class="small" x="452" y="341" text-anchor="middle">constrained by adaptive Lp</text>
+  <rect class="green" x="660" y="145" width="270" height="125"/>
+  <text class="label" x="795" y="184" text-anchor="middle">Utility Term</text>
+  <text class="small" x="795" y="215" text-anchor="middle">keep anonymized face realistic</text>
+  <text class="mono" x="795" y="243" text-anchor="middle">learn p2 for image norm</text>
+  <rect class="rose" x="660" y="330" width="270" height="125"/>
+  <text class="label" x="795" y="369" text-anchor="middle">Privacy Term</text>
+  <text class="small" x="795" y="400" text-anchor="middle">move identity embedding away</text>
+  <text class="mono" x="795" y="428" text-anchor="middle">learn p1 for feature norm</text>
+  <rect class="box" x="1020" y="220" width="280" height="110"/>
+  <text class="label" x="1160" y="258" text-anchor="middle">Evaluation</text>
+  <text class="small" x="1160" y="288" text-anchor="middle">TPR at FPR=0.001</text>
+  <text class="small" x="1160" y="313" text-anchor="middle">SSIM and recognition transfer</text>
+  <path class="arrow" d="M250 275 H330"/>
+  <path class="arrow" d="M575 275 C620 260 620 215 660 207"/>
+  <path class="arrow" d="M575 275 C620 295 620 385 660 392"/>
+  <path class="arrow" d="M930 207 C975 220 980 255 1020 265"/>
+  <path class="arrow" d="M930 392 C985 380 980 305 1020 285"/>
+  <rect class="box" x="205" y="500" width="990" height="60"/>
+  <text class="small" x="700" y="535" text-anchor="middle">Purpose: adaptive Lp perturbations hide identity without requiring a target identity image.</text>
+</svg>

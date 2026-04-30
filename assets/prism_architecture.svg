@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="670" viewBox="0 0 1400 670">
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.box{fill:#fff;stroke:#111827;stroke-width:2.2;rx:16}.green{fill:#ecfdf5;stroke:#059669;stroke-width:2.2;rx:16}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2.2;rx:16}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2.2;rx:16}.rose{fill:#fff1f2;stroke:#e11d48;stroke-width:2.2;rx:16}.title{font:700 32px Arial,Helvetica,sans-serif;fill:#111827}.label{font:700 20px Arial,Helvetica,sans-serif;fill:#111827}.small{font:400 15px Arial,Helvetica,sans-serif;fill:#374151}.mono{font:700 15px Consolas,monospace;fill:#111827}.arrow{stroke:#111827;stroke-width:2.8;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 z" fill="#111827"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="670"/>
+  <text class="title" x="700" y="58" text-anchor="middle">Approach 2 Architecture: PRISM</text>
+  <rect class="box" x="55" y="250" width="170" height="105"/>
+  <text class="label" x="140" y="290" text-anchor="middle">Input I</text>
+  <text class="small" x="140" y="320" text-anchor="middle">LFW / CelebA-HQ</text>
+  <rect class="green" x="300" y="190" width="245" height="225"/>
+  <text class="label" x="422" y="230" text-anchor="middle">Wavelet Domain</text>
+  <text class="small" x="422" y="263" text-anchor="middle">DWT decomposition</text>
+  <text class="mono" x="422" y="292" text-anchor="middle">LL, LH, HL, HH</text>
+  <text class="small" x="422" y="323" text-anchor="middle">per-band perturbation</text>
+  <text class="mono" x="422" y="352" text-anchor="middle">p_s in [1,2]</text>
+  <rect class="blue" x="625" y="120" width="290" height="145"/>
+  <text class="label" x="770" y="160" text-anchor="middle">Fisher Metric</text>
+  <text class="small" x="770" y="193" text-anchor="middle">identity-sensitive geometry</text>
+  <text class="mono" x="770" y="222" text-anchor="middle">diag G from gradients</text>
+  <rect class="amber" x="625" y="335" width="290" height="145"/>
+  <text class="label" x="770" y="375" text-anchor="middle">Jacobian Subspace</text>
+  <text class="small" x="770" y="408" text-anchor="middle">top identity directions</text>
+  <text class="mono" x="770" y="437" text-anchor="middle">guide P toward FR changes</text>
+  <rect class="rose" x="1000" y="230" width="320" height="165"/>
+  <text class="label" x="1160" y="270" text-anchor="middle">PRISM Objective</text>
+  <text class="small" x="1160" y="303" text-anchor="middle">Riemannian privacy margin</text>
+  <text class="small" x="1160" y="331" text-anchor="middle">utility and wavelet regularization</text>
+  <text class="mono" x="1160" y="361" text-anchor="middle">compare with PrIdentity</text>
+  <path class="arrow" d="M225 302 H300"/>
+  <path class="arrow" d="M545 302 C590 285 590 205 625 193"/>
+  <path class="arrow" d="M545 302 C590 320 590 400 625 408"/>
+  <path class="arrow" d="M915 193 C970 210 960 285 1000 302"/>
+  <path class="arrow" d="M915 408 C970 390 960 340 1000 325"/>
+  <rect class="box" x="160" y="555" width="1080" height="58"/>
+  <text class="small" x="700" y="590" text-anchor="middle">Purpose: optimize perturbations in frequency bands using embedding geometry and utility constraints.</text>
+</svg>
