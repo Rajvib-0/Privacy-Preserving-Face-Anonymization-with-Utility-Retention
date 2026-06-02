@@ -2,7 +2,7 @@
 
 **ICLR-style project report**
 
-**Authors:** Purav Shah, 202518020; Rajvi Burad, 202518048
+**Authors:** Purav Shah, 202518020; Rajvi Burad, 202518048 
 
 ## Abstract
 
